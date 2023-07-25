@@ -10,12 +10,12 @@
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <style type="text/css">
   
-    .masthead{
+    .masthead {
         font-family: 'Damion', cursive; /* required for google font */
         font-size:3em;
     }
 
-    #logo{
+    #logo {
         float:right;
         display:inline-block;
         padding:2px;
@@ -31,10 +31,20 @@
         width:33%; /* approximate size taken on screen in maximum view */
     }
 
-    ul.colors{
+    ul.colors {
 	display:inline-block;
 	margin-left:5%;
-}
+    }
+
+    div#myDiv {
+        /* background-color: yellow; */
+    }
+
+    div#myDiv > p {
+        background-color: aquamarine;
+    }
+
+
   </style>
  </head>
  <body>
@@ -63,6 +73,15 @@
             <li>Winter: <b>#005393</b></li>
         </ul>
     </p>
+
+    <div id="myDiv">
+        <p><span>Inside a div with an id of myDiv</span></p>
+        <p>Inside a div with an id of myDiv!</p>
+        <p>Inside a div with an id of myDiv...</p>
+        <p>Inside a div with an id of myDiv??</p>
+    </div>
+
+
     <p>
     Aesthetic gentrify YOLO McSweeney's typewriter single-origin coffee. Slow-carb hella listicle lomo, Helvetica single-origin coffee butcher stumptown. Chambray try-hard church-key mumblecore, tote bag PBR cardigan. Retro Austin Brooklyn, blog Intelligentsia gentrify jean shorts sartorial bicycle rights gastropub. Aesthetic wayfarers Pitchfork, tattooed Carles quinoa meh leggings distillery pork belly banjo. Umami cred lumbersexual skateboard, pork belly Tumblr vegan letterpress. Fixie bicycle rights butcher chillwave, gluten-free health goth Echo Park locavore whatever.
     <img src="images/300x400.png" alt="Season Wear Goes Here" id="wear" />
@@ -78,12 +97,21 @@
     </p>
     <footer>
     <p><small>&copy; 2021 by 
-        YOUR NAME HERE, All Rights Reserved ~ 
+        Sarah Keane, All Rights Reserved ~ 
         <a id="html-checker" href="#">Check HTML</a> ~ 
         <a id="css-checker" href="#">Check CSS</a></small>
     </p>
     </footer>
   </main>
   <script src="js/main.js"></script>
+  <script>
+
+    $("document").ready(function() {
+    });
+
+    
+
+
+  </script>
   </body>
 </html>
