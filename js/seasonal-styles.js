@@ -34,23 +34,23 @@ const SEASONS = {
 //////////////// DOCUMENT READY BLOCK BEGIN ////////////////
 $("document").ready(function() {
 
-    let counter = 0;
-    $("div#myDiv p").each(function(){
-        counter++;
-        $(this).prepend(counter + "] ");
-    });
+    // let counter = 0;
+    // $("ul.colors li").each(function(){
+    //     counter++;
+    //     $(this).prepend(counter + "] ");
+    // });
 
-    //start hidden
-    $("div#yetAnotherDiv li").hide();
+    // //start hidden
+    // $("div#yetAnotherDiv li").hide();
     
-    //reveal li items
-    $("div#yetAnotherDiv")
-    .hide()
-    .fadeIn(2000,function(){
-        $("div#yetAnotherDiv li").each(function(){
-            $(this).slideDown(1000);
-        });
-    });
+    // //reveal li items
+    // $("div#yetAnotherDiv")
+    // .hide()
+    // .fadeIn(2000,function(){
+    //     $("div#yetAnotherDiv li").each(function(){
+    //         $(this).slideDown(1000);
+    //     });
+    // });
     
     
     $("document").ready(function(){
