@@ -11,19 +11,28 @@ Deliverables: Using jQuery, create a page that promotes a unique look and feel f
 // Making this all caps to indicate a constant that I never want to change
 // maybe add colors to each season? but I'll just leave it to the CSS for now
 const SEASONS = {
+    default: {
+        css: "css/default.css",
+        logo: "images/four-seasons.gif",
+        wear: "images/300x400.png",
+    },
     spring: {
+        css: "css/spring.css",
         logo: "images/spring.gif",
         wear: "images/spring-wear.jpg",
     },
     summer: {
+        css: "css/summer.css",
         logo: "images/summer.gif",
         wear: "images/summer-wear.jpg",
     },
     fall: {
+        css: "css/fall.css",
         logo: "images/fall.gif",
         wear: "images/fall-wear.jpg",
     },
     winter: {
+        css: "css/winter.css",
         logo: "images/winter.gif",
         wear: "images/winter-wear.jpg",
     }
@@ -57,7 +66,19 @@ $("document").ready(function() {
         $('.seasons a').click(function(e){//find all a tags inside class of seasons
             e.preventDefault();//stop default submission
             let season = $(this).attr("href");//contents of href attribute of this element
-            alert(season);
+            
+            // destructuring assignment to unpack object properties from SEASONS (while looking cool and smart)
+            let {css, logo, wear} = SEASONS[season]
+
+            // replace logo image
+            $('img#logo').attr("src", logo)
+
+            // replace wear image
+            $('img#wear').attr("src", wear)
+
+            // replace stylesheet
+            $('link#season-css').attr("href",css)
+
         });
     });
 
