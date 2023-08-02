@@ -8,21 +8,26 @@ Deliverables: Using jQuery, create a page that promotes a unique look and feel f
     A unique string of text identifying the season, for example "Leap into our Fall Wear!"
 */
 
-
-
-
-
-
-
-
-
-$("document").ready(function(){
-    $('.seasons a').click(function(e){//find all a tags inside class of seasons
-        e.preventDefault();//stop default submission
-        var season = $(this).attr("href");//contents of href attribute of this element
-        alert(season);
-    });
-});
+// Making this all caps to indicate a constant that I never want to change
+// maybe add colors to each season? but I'll just leave it to the CSS for now
+const SEASONS = {
+    spring: {
+        logo: "images/spring.gif",
+        wear: "images/spring-wear.jpg",
+    },
+    summer: {
+        logo: "images/summer.gif",
+        wear: "images/summer-wear.jpg",
+    },
+    fall: {
+        logo: "images/fall.gif",
+        wear: "images/fall-wear.jpg",
+    },
+    winter: {
+        logo: "images/winter.gif",
+        wear: "images/winter-wear.jpg",
+    }
+}
 
 
 
