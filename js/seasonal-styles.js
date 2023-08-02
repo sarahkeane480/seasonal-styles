@@ -56,14 +56,14 @@ $("document").ready(function() {
             // destructuring assignment to unpack object properties from SEASONS (while looking cool and smart)
             let {quote, css, logo, wear} = SEASONS[season]
 
+            // replace stylesheet
+            $('link#season-css').attr("href",css)
+
             // replace logo image
             $('img#logo').attr("src", logo)
 
             // replace wear image
             $('img#wear').attr("src", wear)
-
-            // replace stylesheet
-            $('link#season-css').attr("href",css)
 
             // replace quote
             $('h2#season-quote').html(quote)
