@@ -1,3 +1,21 @@
+
+/*
+Deliverables: Using jQuery, create a page that promotes a unique look and feel for each of the four seasons by changing a page in the 4 following areas:
+
+    A unique color scheme, for example stylesheet or background color, etc.
+    A unique logo, for example a picture of a snowflake for winter, etc.
+    A unique item of clothing, for example a parka for winter.
+    A unique string of text identifying the season, for example "Leap into our Fall Wear!"
+*/
+
+
+
+
+
+
+
+
+
 $("document").ready(function(){
     $('.seasons a').click(function(e){//find all a tags inside class of seasons
         e.preventDefault();//stop default submission
@@ -5,6 +23,8 @@ $("document").ready(function(){
         alert(season);
     });
 });
+
+
 
 //////////////// DOCUMENT READY BLOCK BEGIN ////////////////
 $("document").ready(function() {

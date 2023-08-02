@@ -1,0 +1,35 @@
+.masthead {
+    font-family: 'Damion', cursive;
+    /* required for google font */
+    font-size: 3em;
+}
+
+#logo {
+    float: right;
+    display: inline-block;
+    padding: 2px;
+    max-width: 100px;
+    /* actual size of image */
+    width: 20%;
+    /* approximate size taken on screen in maximum view */
+}
+
+#wear {
+    float: left;
+    display: inline-block;
+    padding: 20px;
+    max-width: 300px;
+    /* actual size of image */
+    width: 33%;
+    /* approximate size taken on screen in maximum view */
+}
+
+ul.colors {
+display: inline-block;
+margin-left: 5%;
+}
+
+ul.deliverables {
+display: inline-block;
+margin-left: 5%;
+}
