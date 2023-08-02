@@ -4,6 +4,13 @@
     font-size: 3em;
 }
 
+.season-quote {
+    font-family: 'Edu SA Beginner', cursive;
+    /* required for google font */
+    font-size: 2em;
+    text-align: center;
+}
+
 #logo {
     float: right;
     display: inline-block;

@@ -12,26 +12,31 @@ Deliverables: Using jQuery, create a page that promotes a unique look and feel f
 // maybe add colors to each season? but I'll just leave it to the CSS for now
 const SEASONS = {
     default: {
+        quote: "Don't be a DEFAULT Andy!",
         css: "css/default.css",
         logo: "images/four-seasons.gif",
         wear: "images/300x400.png",
     },
     spring: {
+        quote: "Get ready to <strong>SPRING</strong> into our sweaters!",
         css: "css/spring.css",
         logo: "images/spring.gif",
         wear: "images/spring-wear.jpg",
     },
     summer: {
+        quote: "Ya better <strong>SUMMER</strong> down!",
         css: "css/summer.css",
         logo: "images/summer.gif",
         wear: "images/summer-wear.jpg",
     },
     fall: {
+        quote: "Don't <strong>FALL</strong> out of style!",
         css: "css/fall.css",
         logo: "images/fall.gif",
         wear: "images/fall-wear.jpg",
     },
     winter: {
+        quote: "Get ready for an Epic <strong>WIN</strong>ter!",
         css: "css/winter.css",
         logo: "images/winter.gif",
         wear: "images/winter-wear.jpg",
@@ -42,25 +47,6 @@ const SEASONS = {
 
 //////////////// DOCUMENT READY BLOCK BEGIN ////////////////
 $("document").ready(function() {
-
-    // let counter = 0;
-    // $("ul.colors li").each(function(){
-    //     counter++;
-    //     $(this).prepend(counter + "] ");
-    // });
-
-    // //start hidden
-    // $("div#yetAnotherDiv li").hide();
-    
-    // //reveal li items
-    // $("div#yetAnotherDiv")
-    // .hide()
-    // .fadeIn(2000,function(){
-    //     $("div#yetAnotherDiv li").each(function(){
-    //         $(this).slideDown(1000);
-    //     });
-    // });
-    
     
     $("document").ready(function(){
         $('.seasons a').click(function(e){//find all a tags inside class of seasons
@@ -68,7 +54,7 @@ $("document").ready(function() {
             let season = $(this).attr("href");//contents of href attribute of this element
             
             // destructuring assignment to unpack object properties from SEASONS (while looking cool and smart)
-            let {css, logo, wear} = SEASONS[season]
+            let {quote, css, logo, wear} = SEASONS[season]
 
             // replace logo image
             $('img#logo').attr("src", logo)
@@ -78,6 +64,9 @@ $("document").ready(function() {
 
             // replace stylesheet
             $('link#season-css').attr("href",css)
+
+            // replace quote
+            $('h2#season-quote').html(quote)
 
         });
     });
